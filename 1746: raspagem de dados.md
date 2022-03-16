@@ -33,8 +33,9 @@ time.sleep(20)
 email = driver.find_element_by_css_selector('body > div.container > #content > #acessar-view > div > div > section > div > div > form > fieldset > #diazo-71032_3 > #login-modal')
 email.send_keys("rafaella.salles@rio21.org")
 
+#inserir senha
 senha = driver.find_element_by_css_selector("body > div.container > #content > #acessar-view > div > div > section > div > div > form > fieldset > #diazo-71032_3 > #password")
-senha.send_keys("Rs220s251**")
+senha.send_keys("inserir")
 
 botao = driver.find_element_by_css_selector('#acessar-view > div > div > section > div > div > form > fieldset > div:nth-child(4) > button')
 botao.click()
@@ -78,112 +79,4 @@ for x in range(0,14):
         #aba = driver.find_element_by_xpath('//*[@id="RIO-23961951-4"]/div[1]/div[1]/div[2]/span')
         #aba.click()
         #resposta = driver.find_element_by_xpath('//*[@id="RIO-23961951-4"]/div[2]/div[1]/div[2]/div[2]')
-```
-
-    RIO-23974184-0
-    RIO-23974181-6
-    RIO-23952950-2
-    RIO-23952828-8
-    RIO-23952810-4
-    RIO-23946311-8
-    RIO-23946310-5
-    RIO-23946309-2
-    RIO-23946306-0
-    RIO-23946305-7
-    None
-    None
-    None
-    None
-    None
-    None
-    None
-    None
-    None
-    None
-    RIO-23946304-4
-    RIO-23946302-8
-    RIO-23946300-2
-    RIO-23919236-4
-    RIO-23919231-4
-    RIO-23919224-2
-    RIO-23919221-0
-    RIO-23919219-8
-    RIO-23919214-8
-    RIO-23919212-0
-    None
-    None
-    None
-    None
-    None
-    None
-    None
-    None
-    None
-    None
-    RIO-23919210-4
-    RIO-23919209-4
-    RIO-23919201-4
-    RIO-23919198-5
-    RIO-23900766-0
-    RIO-23888384-5
-    RIO-23880109-4
-    RIO-23879863-0
-    RIO-23879858-0
-    RIO-23879850-0
-    None
-    None
-    None
-    None
-    None
-    None
-    None
-    None
-    None
-    None
-
-
-
-    ---------------------------------------------------------------------------
-
-    WebDriverException                        Traceback (most recent call last)
-
-    <ipython-input-41-74d2c2cd3d70> in <module>
-         37 for x in range(0,14):
-         38     url='https://www.1746.rio/portal/perfil/minhas-solicitacoes?page='+converted_num[x]
-    ---> 39     driver.get(url)
-         40     ids = driver.find_elements_by_xpath("//*[contains(@id,'RIO')]")
-         41     serviços = driver.find_elements_by_xpath("//*[contains(@id,'RIO')]/div[1]/div[2]/div[2]/div[1]/p")
-
-
-    /opt/anaconda3/lib/python3.8/site-packages/selenium/webdriver/remote/webdriver.py in get(self, url)
-        331         Loads a web page in the current browser session.
-        332         """
-    --> 333         self.execute(Command.GET, {'url': url})
-        334 
-        335     @property
-
-
-    /opt/anaconda3/lib/python3.8/site-packages/selenium/webdriver/remote/webdriver.py in execute(self, driver_command, params)
-        319         response = self.command_executor.execute(driver_command, params)
-        320         if response:
-    --> 321             self.error_handler.check_response(response)
-        322             response['value'] = self._unwrap_value(
-        323                 response.get('value', None))
-
-
-    /opt/anaconda3/lib/python3.8/site-packages/selenium/webdriver/remote/errorhandler.py in check_response(self, response)
-        240                 alert_text = value['alert'].get('text')
-        241             raise exception_class(message, screen, stacktrace, alert_text)
-    --> 242         raise exception_class(message, screen, stacktrace)
-        243 
-        244     def _value_or_default(self, obj, key, default):
-
-
-    WebDriverException: Message: 
-
-
-
-
-```python
-
 ```
