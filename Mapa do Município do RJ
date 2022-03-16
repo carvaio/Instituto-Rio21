@@ -15,6 +15,7 @@ bairros_rj = bairros_rj %>% select(name_neighborhood,geom,code_neighborhood)
 #necessario para merge acontecer sem problemas
 bairros_rj$code_neighborhood = as.numeric(levels(bairros_rj$code_neighborhood))[bairros_rj$code_neighborhood]
 
+#Percentual de entrevistados de cada região do RJ
 base = read_xlsx("/Users/carol/Desktop/R/regiao_mora_mar22.xlsx")
 
 maps = left_join(bairros_rj,base,by="code_neighborhood",all=TRUE)
