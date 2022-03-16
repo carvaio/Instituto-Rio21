@@ -1,7 +1,7 @@
 library("basedosdados")
 library(dplyr)
 
-set_billing_id("censo-escolar-340817")
+set_billing_id("inserir")
 
 base = read_sql("SELECT * FROM `basedosdados.br_inep_censo_escolar.turma` WHERE id_municipio= \'3304904\'",page_size=9000)
 
