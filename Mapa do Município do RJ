@@ -23,16 +23,6 @@ maps = left_join(bairros_rj,base,by="code_neighborhood",all=TRUE)
 font_import()
 loadfonts(device="win")
 
-#nao usei
-ggplot(data=maps) +
-  geom_sf(data=maps[maps$regiao %in% c("centro"), ], fill="#26AFC8",color="black")+
-  geom_sf(data=maps[maps$regiao %in% c("zona sul"), ], fill="#5D4898",color="black")+
-  geom_sf(data=maps[maps$regiao %in% c("zona norte"), ], fill="#4B6AA8",color="black")+
-  geom_sf(data=maps[maps$regiao %in% c("zona oeste"), ], fill="#388DB8",color="black")+
-  labs(subtitle="Município do Rio de Janeiro")+
-  theme_void()+
-  theme(text=element_text(family="Arial", size=14))
-
 maps$porc = cut(maps$porc,breaks=c(0,0.05,0.17,0.36,0.41))
 
 ggplot(data=maps)+
