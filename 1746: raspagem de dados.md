@@ -42,7 +42,7 @@ email = driver.find_element_by_css_selector('body > div.container > #content > #
 email.send_keys("gisele@rio21.org")
 
 senha = driver.find_element_by_css_selector("body > div.container > #content > #acessar-view > div > div > section > div > div > form > fieldset > #diazo-71032_3 > #password")
-senha.send_keys("instituto21")
+senha.send_keys("")
 
 botao = driver.find_element_by_css_selector('#acessar-view > div > div > section > div > div > form > fieldset > div:nth-child(4) > button')
 botao.click()
